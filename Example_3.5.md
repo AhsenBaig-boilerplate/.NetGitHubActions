@@ -22,7 +22,7 @@ jobs:
         msbuild /t:Restore
         msbuild /t:Build /p:Configuration=Release /p:DebugSymbols=true /p:DebugType=full /p:TargetFrameworkVersion=v3.5
     # Publish each built artifact to GitHub Packages
-    - name: Publish to GitHub Packages
+    - name: Publish to GitHub Packages - Release - MyLibrary1
       uses: actions/upload-artifact@v2
       with:
         # Name the artifact based on the project name and configuration
@@ -35,7 +35,7 @@ jobs:
         with:
           name: MyLibrary1-Release-Symbols
           path: src/MyLibrary1/bin/Release/MyLibrary1.pdb
-    - name: Publish to GitHub Packages
+    - name: Publish to GitHub Packages - Debug - MyLibrary1
       uses: actions/upload-artifact@v2
       with:
         # Name the artifact based on the project name and configuration
@@ -48,11 +48,30 @@ jobs:
         with:
           name: MyLibrary1-Debug-Symbols
           path: src/MyLibrary1/bin/Debug/MyLibrary1.pdb
-    - name: Publish to GitHub Packages
+    - name: Publish to GitHub Packages - Release - MyLibrary2
       uses: actions/upload-artifact@v2
       with:
         # Name the artifact based on the project name and configuration
         name: MyLibrary2-Release
         # Set the output path to the built DLL file for the project
-        path: src/MyLibrary2/bin/Release/My
+        path: src/MyLibrary2/bin/Release/MyLibrary2.dll
+        # Include the PDB file in the package
+        if: success()
+        continue-on-error: true
+        with:
+          name: MyLibrary2-Release-Symbols
+          path: src/MyLibrary2/bin/Release/MyLibrary2.pdb
+    - name: Publish to GitHub Packages - Debug - MyLibrary1
+      uses: actions/upload-artifact@v2
+      with:
+        # Name the artifact based on the project name and configuration
+        name: MyLibrary2-Debug
+        # Set the output path to the built DLL file for the project
+        path: src/MyLibrary2/bin/Debug/MyLibrary2.dll
+        # Include the PDB file in the package
+        if: success()
+        continue-on-error: true
+        with:
+          name: MyLibrary2-Debug-Symbols
+          path: src/MyLibrary2/bin/Debug/MyLibrary2.pdb
 ```
