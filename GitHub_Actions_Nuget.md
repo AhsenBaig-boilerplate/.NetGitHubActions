@@ -117,6 +117,19 @@ Changes are detailed at https://github.com/Taiizor/ReaLTaiizor/releases</Package
         <NoWarn>1587,1591</NoWarn>
     </PropertyGroup>
 ```
+## Topic
+- GitHub
+    - [RollerKnobster/SS-Actions-Auto-Version: SS-Actions-Auto-Version (github.com)](https://github.com/RollerKnobster/SS-Actions-Auto-Version)
+    - [Connecting a repository to a package - GitHub Docs](https://docs.github.com/en/packages/learn-github-packages/connecting-a-repository-to-a-package)
+    - [AhsenBaig-boilerplate/.NetGitHubActions](https://github.com/AhsenBaig-boilerplate/.NetGitHubActions/tree/main)
+- .Net
+    - [Customize your build - MSBuild | Microsoft Learn](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2022#directorybuildprops-and-directorybuildtargets)
+    - [Producing Packages with Source Link - .NET Blog (microsoft.com)](https://devblogs.microsoft.com/dotnet/producing-packages-with-source-link/)
+    - [Create .NET Standard and .NET Framework NuGet Packages with Visual Studio 2015 | Microsoft Learn](https://learn.microsoft.com/en-us/nuget/guides/create-net-standard-packages-vs2015)
+
+- Sub-topic
+    - [Conventional Commits: A Better Way | by Michael Collins | Neudesic Innovation | Medium](https://medium.com/neudesic-innovation/conventional-commits-a-better-way-78d6785c2e08)
+    - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification)
 
 ## :star: Resources
 
